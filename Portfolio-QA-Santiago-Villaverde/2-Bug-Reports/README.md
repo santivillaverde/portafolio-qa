@@ -1,0 +1,1 @@
+Este documento contiene 6 reportes de bugs funcionales y visuales identificados en el sitio de prueba buggy.justtestit.org. Los reportes incluyen validaciones de campos, navegación rota, ordenamientos incorrectos y errores visuales. Cada bug está documentado con pasos detallados, resultados esperados/obtenidos, prioridad y contexto técnico.
