@@ -1,0 +1,69 @@
+{
+	"info": {
+		"_postman_id": "d27c86ba-3c4b-45e5-9a37-eda9b9bb2c82",
+		"name": "Pagina overall rating",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "47290085",
+		"_collection_link": "https://villaverdesantiago123-8978650.postman.co/workspace/Buggy-cars-APIS~06c4962a-633f-465d-9ad4-464f30eadc24/collection/47290085-d27c86ba-3c4b-45e5-9a37-eda9b9bb2c82?action=share&source=collection_link&creator=47290085"
+	},
+	"item": [
+		{
+			"name": "API modelo alfa romeo",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Validar que la respuesta sea 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Response time is less than 200ms\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(4000);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Respuesta incluye nombre del auto\", function () {\r",
+							"    pm.expect(pm.response.text()).to.include(\"name\");\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Respuesta incluye nombre del description\", function () {\r",
+							"    pm.expect(pm.response.text()).to.include(\"description\");\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Respuesta incluye nombre del comments\", function () {\r",
+							"    pm.expect(pm.response.text()).to.include(\"comments\");\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Respuesta incluye nombre del votes\", function () {\r",
+							"    pm.expect(pm.response.text()).to.include(\"votes\");\r",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://k51qryqov3.execute-api.ap-southeast-2.amazonaws.com/prod/models/ckl2phsabijs71623vtg%7Cckl2phsabijs71623vvg",
+					"protocol": "https",
+					"host": [
+						"k51qryqov3",
+						"execute-api",
+						"ap-southeast-2",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"prod",
+						"models",
+						"ckl2phsabijs71623vtg%7Cckl2phsabijs71623vvg"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

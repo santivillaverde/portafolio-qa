@@ -1,0 +1,159 @@
+{
+	"info": {
+		"_postman_id": "b7fe89bf-6f1d-4c03-974c-0245e98cc7af",
+		"name": "Pruebas de APIs",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "47290085",
+		"_collection_link": "https://villaverdesantiago123-8978650.postman.co/workspace/Buggy-cars-APIS~06c4962a-633f-465d-9ad4-464f30eadc24/collection/47290085-b7fe89bf-6f1d-4c03-974c-0245e98cc7af?action=share&source=collection_link&creator=47290085"
+	},
+	"item": [
+		{
+			"name": "Prueba usuarios",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Validar que la respuesta sea 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Respuesta incluye nombre del username\", function () {\r",
+							"    pm.expect(pm.response.text()).to.include(\"username\");\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Respuesta incluye nombre del address\", function () {\r",
+							"    pm.expect(pm.response.text()).to.include(\"address\");\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Respuesta incluye nombre del city\", function () {\r",
+							"    pm.expect(pm.response.text()).to.include(\"city\");\r",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://jsonplaceholder.typicode.com/users",
+					"protocol": "https",
+					"host": [
+						"jsonplaceholder",
+						"typicode",
+						"com"
+					],
+					"path": [
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Prueba Comentarios",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Validar que la respuesta sea 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Respuesta incluye nombre del name\", function () {\r",
+							"    pm.expect(pm.response.text()).to.include(\"name\");\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Respuesta incluye nombre del email\", function () {\r",
+							"    pm.expect(pm.response.text()).to.include(\"email\");\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Respuesta incluye nombre del body\", function () {\r",
+							"    pm.expect(pm.response.text()).to.include(\"body\");\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Respuesta de tiempo menor a 900ms\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(900);\r",
+							"});\r",
+							"\r",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://jsonplaceholder.typicode.com/comments",
+					"protocol": "https",
+					"host": [
+						"jsonplaceholder",
+						"typicode",
+						"com"
+					],
+					"path": [
+						"comments"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Prueba de fotos",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Validar que la respuesta sea 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Respuesta incluye nombre del albumId\", function () {\r",
+							"    pm.expect(pm.response.text()).to.include(\"albumId\");\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Respuesta incluye nombre del title\", function () {\r",
+							"    pm.expect(pm.response.text()).to.include(\"title\");\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Respuesta incluye nombre del url\", function () {\r",
+							"    pm.expect(pm.response.text()).to.include(\"url\");\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Respuesta de tiempo menor a 800ms\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(800);\r",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://jsonplaceholder.typicode.com/photos",
+					"protocol": "https",
+					"host": [
+						"jsonplaceholder",
+						"typicode",
+						"com"
+					],
+					"path": [
+						"photos"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
