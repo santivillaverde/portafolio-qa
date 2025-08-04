@@ -1,0 +1,1 @@
+Contiene una suite de pruebas funcionales sobre el proceso de registro de usuarios, incluyendo pruebas positivas y negativas, estructuradas con prioridad, precondiciones, datos de entrada y pasos detallados.
